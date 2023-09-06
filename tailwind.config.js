@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         primaryColor: "#0099ff",
-        secondaryColor: "#FEC00F",
+        secondaryColor: "#0C356A",
         headingColor: "#222",
         txtSmallColor: "#555"
       }
