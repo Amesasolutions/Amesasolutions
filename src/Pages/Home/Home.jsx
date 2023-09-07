@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../../Components/header/Header";
 import Footer from "../../Components/footer/Footer";
 import Hero from "../../Components/HomeContents/Hero";
@@ -9,6 +9,10 @@ import Dvider from "../../Components/HomeContents/Dvider";
 import OurWebsites from "../../Components/HomeContents/OurWebsites";
 
 function Home() {
+  useEffect(() => {
+    document.title = "Home - Amesa Solutions"
+  }, [])
+  
   return (
     <>
       <Header />
