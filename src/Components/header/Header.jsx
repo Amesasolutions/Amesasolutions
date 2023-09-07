@@ -99,7 +99,7 @@ function Header() {
         {/* ===== Nav links end ====== */}
         {/* ===== menu start ====== */}
         <div onClick={toggleMenu} className="block md:hidden bg-primaryColor w-[40px] h-[40px] leading-[40px] rounded cursor-pointer text-center text-xl text-white">
-          <i class={`ri-${menu}-line`}></i>
+          <i className={`ri-${menu}-line`}></i>
         </div>
         {/* ===== menu end ====== */}
       </div>
