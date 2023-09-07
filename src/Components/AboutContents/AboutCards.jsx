@@ -1,5 +1,4 @@
 import React from "react";
-// import {FaCode} from 'react-icons/fa'
 import icon1 from "../../assets/w-1icon.png";
 import icon2 from "../../assets/w-2icone.png";
 import icon3 from "../../assets/w-icon3.png";

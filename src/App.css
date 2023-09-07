@@ -42,14 +42,32 @@ section {
 .sticky__header {
   background: white;
   width: 100%;
-  /* height: 80px;
-  line-height: 80px; */
   position: sticky;
   top: 0;
   left: 0;
   z-index: 99;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
   transition: 0.3s height linear;
+}
+
+#line-hover {
+  position: relative !important;
+  z-index: 10;
+}
+
+#line-hover::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background: #0099ff;
+  width: 0%;
+  height: 3px;
+  transition: 0.3s width linear
+}
+
+#input:focus + #line-hover::after {
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
