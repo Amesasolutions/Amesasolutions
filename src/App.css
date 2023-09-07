@@ -42,8 +42,8 @@ section {
 .sticky__header {
   background: white;
   width: 100%;
-  height: 80px;
-  line-height: 80px;
+  /* height: 80px;
+  line-height: 80px; */
   position: sticky;
   top: 0;
   left: 0;
@@ -51,7 +51,6 @@ section {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
   transition: 0.3s height linear;
 }
-
 
 @media only screen and (max-width: 768px) {
   #menu {
@@ -70,10 +69,3 @@ section {
   }
 }
 
-#box{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  /* background-image: linear-gradient(to top, #0c356a, #144c8d, #1864b2, #167ed8, #0099ff); */
-  background-color: white;
-  border-radius: 0.9rem;
-  /* color: white; */
-}

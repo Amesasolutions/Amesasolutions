@@ -40,7 +40,7 @@ function Header() {
   return (
     <header
       ref={headerRef}
-      className="w-full bg-white h-[80px] leading-[80px]"
+      className="w-full bg-white h-[80px] flex items-center justify-center"
     >
       <div className="container flex items-center justify-between">
         {/* ===== logo start ====== */}
