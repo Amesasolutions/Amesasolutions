@@ -35,6 +35,7 @@ function Model({ activeId, setShowModal }) {
         </div>
         <a
           href={portfolio.siteUrl}
+          target="_blank"
           className="mt-4 w-full bg-primaryColor flex gap-3 items-center justify-center p-2 px-4 border border-solid border-primaryColor hover:border-secondaryColor
               rounded-[5px] text-white hover:bg-secondaryColor hover:text-white ease duration-200"
         >

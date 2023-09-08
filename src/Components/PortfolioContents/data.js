@@ -5,47 +5,51 @@ import portfolioImg04 from "../../assets/portfolio-04.jpg";
 import portfolioImg05 from "../../assets/portfolio-05.jpg";
 import portfolioImg06 from "../../assets/portfolio-06.jpg";
 import portfolioImg07 from "../../assets/portfolio-07.jpg";
+import portfolioimg08 from "../../assets/WEB.jpg"
+import portfolioImg09 from "../../assets/Renter.jpg"
+import portfolioImg10 from "../../assets/E-commerce.jpg"
+import portfolioImg11 from '../../assets/blog.jpg'
 
 const portfolios = [
   {
     id: "01",
-    imgUrl: portfolioImg01,
+    imgUrl:portfolioimg08,
     category: "Web Design",
-    title: "Finance Technology Website",
+    title: "Web Organisation",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-    technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
-    siteUrl: "#",
+      "is an organisation that creates schools in small Somali towns",
+    technologies: ["React", "Tailwind css", "Figma UI / UX"],
+    siteUrl: "https://somalischool.netlify.app/",
   },
   {
     id: "02",
-    imgUrl: portfolioImg04,
+    imgUrl: portfolioImg09,
     category: "Ux",
-    title: "Video Conference Website",
+    title: "Renter Management System",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-    technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
-    siteUrl: "#",
+      "Easy way to manage your property",
+    technologies: ["React", "Tailwind css", "Node.js", "Figma UI / UX"],
+    siteUrl: "https://tenants-management.netlify.app/",
   },
   {
     id: "03",
-    imgUrl: portfolioImg02,
+    imgUrl: portfolioImg10,
     category: "Ux",
-    title: "Multimedia Sharing Website",
+    title: "E-Commerce",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-    technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
-    siteUrl: "#",
+      "Birmad Online market is a company that sells products on online,",
+    technologies: ["Wordpress", "Elementor"],
+    siteUrl: "https://birmadonline.com/",
   },
   {
     id: "04",
-    imgUrl: portfolioImg05,
+    imgUrl: portfolioImg11,
     category: "Web Design",
-    title: "Landing Page",
+    title: "Web Blog",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-    technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
-    siteUrl: "#",
+      "A web blog is an online journal or information website  ",
+    technologies: ["WordPress", "Elementor"],
+    siteUrl: "https://www.tujeer.com",
   },
   {
     id: "05",
