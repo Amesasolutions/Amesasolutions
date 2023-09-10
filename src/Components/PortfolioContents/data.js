@@ -9,10 +9,21 @@ import portfolioimg08 from "../../assets/WEB.jpg"
 import portfolioImg09 from "../../assets/Renter.jpg"
 import portfolioImg10 from "../../assets/E-commerce.jpg"
 import portfolioImg11 from '../../assets/blog.jpg'
+import portfolioImg12 from "../../assets/perfumes.jpg"
 
 const portfolios = [
   {
     id: "01",
+    imgUrl:portfolioImg12,
+    category: "Web Design",
+    title: "Mayur Perfumes",
+    description:
+      "Mayur Perfumes is an online shopping website to buy Perfumes and other related products ",
+    technologies: ["Wordpress", "Elementor"],
+    siteUrl: "https://mayurperfumes.so",
+  },
+  {
+    id: "02",
     imgUrl:portfolioimg08,
     category: "Web Design",
     title: "Web Organisation",
@@ -22,7 +33,7 @@ const portfolios = [
     siteUrl: "https://somalischool.netlify.app/",
   },
   {
-    id: "02",
+    id: "03",
     imgUrl: portfolioImg09,
     category: "Ux",
     title: "Renter Management System",
@@ -32,7 +43,7 @@ const portfolios = [
     siteUrl: "https://tenants-management.netlify.app/",
   },
   {
-    id: "03",
+    id: "04",
     imgUrl: portfolioImg10,
     category: "Ux",
     title: "E-Commerce",
@@ -42,7 +53,7 @@ const portfolios = [
     siteUrl: "https://birmadonline.com/",
   },
   {
-    id: "04",
+    id: "05",
     imgUrl: portfolioImg11,
     category: "Web Design",
     title: "Web Blog",
@@ -52,7 +63,7 @@ const portfolios = [
     siteUrl: "https://www.tujeer.com",
   },
   {
-    id: "05",
+    id: "06",
     imgUrl: portfolioImg03,
     category: "Web Design",
     title: "Landing Page",
@@ -63,7 +74,7 @@ const portfolios = [
   },
 
   {
-    id: "06",
+    id: "07",
     imgUrl: portfolioImg06,
     category: "Ux",
     title: "Online Therapy Website",
@@ -73,7 +84,7 @@ const portfolios = [
     siteUrl: "#",
   },
   {
-    id: "07",
+    id: "08",
     imgUrl: portfolioImg07,
     category: "Web Design",
     title: "Appointment Booking Website",
@@ -83,7 +94,7 @@ const portfolios = [
     siteUrl: "#",
   },
   {
-    id: "08",
+    id: "09",
     imgUrl: portfolioImg01,
     category: "Web Design",
     title: "Finance Technology Website",
@@ -93,7 +104,7 @@ const portfolios = [
     siteUrl: "#",
   },
   {
-    id: "09",
+    id: "10",
     imgUrl: portfolioImg02,
     category: "Ux",
     title: "Video Conference Website",
@@ -103,7 +114,7 @@ const portfolios = [
     siteUrl: "#",
   },
   {
-    id: "10",
+    id: "11",
     imgUrl: portfolioImg03,
     category: "Ux",
     title: "File Sharing Website",
@@ -113,7 +124,7 @@ const portfolios = [
     siteUrl: "#",
   },
   {
-    id: "11",
+    id: "12",
     imgUrl: portfolioImg04,
     category: "Web Design",
     title: "Landing Page",
@@ -123,7 +134,7 @@ const portfolios = [
     siteUrl: "#",
   },
   {
-    id: "12",
+    id: "13",
     imgUrl: portfolioImg05,
     category: "Web Design",
     title: "Landing Page",
@@ -133,7 +144,7 @@ const portfolios = [
     siteUrl: "#",
   },
   {
-    id: "13",
+    id: "14",
     imgUrl: portfolioImg06,
     category: "Web Design",
     title: "Online Therapy Website",
@@ -143,7 +154,7 @@ const portfolios = [
     siteUrl: "#",
   },
   {
-    id: "14",
+    id: "15",
     imgUrl: portfolioImg07,
     category: "ux",
     title: "Appointment Booking Website",
