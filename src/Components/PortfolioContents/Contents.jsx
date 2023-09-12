@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import portfolios from "./data";
 import Model from "./Model";
+import { useGetItemQuery } from "../../store/api/ItemsSlice";
 
 function Contents() {
+  const {data: portfolios = [], isLoading} = useGetItemQuery()
+  console.log(portfolios)
+
   const [nextItem, setNextItem] = useState(6);
   const [showModel, setShowModal] = useState(false);
   const [activeId, setActiveId] = useState(null);
@@ -35,7 +38,14 @@ function Contents() {
         {/* ===== title end ===== */}
         {/* ===== Content start ===== */}
         <div className="mt-8 flex flex-wrap items-center gap-4">
-          {portfolios.slice(0, nextItem)?.map((portfolio, index) => (
+          {isLoading ? (
+           <div className="font-medium text-2xl flex gap-3 items-center justify-center">
+            <span className="w-8 h-8 border-2 rounded-full border-primaryColor border-l-gray-200 animate-spin"></span>
+            <h3>Loading...</h3>
+           </div>
+          ) : (
+            <>
+            {portfolios.slice(0, nextItem)?.map((portfolio, index) => (
             <div
               key={portfolio.id}
               data-aos="fade-zoom-in"
@@ -60,6 +70,8 @@ function Contents() {
               </div>
             </div>
           ))}
+            </>
+          )}
         </div>
         {nextItem < portfolios.length && (
           <button
