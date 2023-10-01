@@ -62,6 +62,7 @@ function Contents() {
                 id="input"
                 type="text"
                 name="from_name"
+                required
                 placeholder="Full Name"
                 className="w-full bg-gray-100  rounded text-lg p-3 outline-none"
               />
@@ -71,6 +72,7 @@ function Contents() {
               <input
                 id="input"
                 type="email"
+                required
                 name="from_email"
                 placeholder="Email"
                 className="w-full bg-gray-100  rounded text-lg p-3 outline-none"
@@ -81,6 +83,7 @@ function Contents() {
               <input
                 id="input"
                 type="text"
+                required
                 name="from_number"
                 placeholder="Phone"
                 className="w-full bg-gray-100  rounded text-lg p-3 outline-none"
@@ -95,6 +98,7 @@ function Contents() {
                 id="input"
                 cols="20"
                 rows="5"
+                required
               ></textarea>
               <label id="line-hover" htmlFor=""></label>
             </div>
@@ -113,7 +117,7 @@ function Contents() {
         {/*===== icons ====*/}
         <div className="w-full flex flex-col justify-center items-center mt-12">
           <h2 className="text-primaryColor text-3xl font-medium">
-            Get in Toach Us
+            Get in Touch
           </h2>
           <div className="w-full flex flex-col sm:flex-row justify-center gap-12 md:gap-32  items-center mt-8 ">
             <div

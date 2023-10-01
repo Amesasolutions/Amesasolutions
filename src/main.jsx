@@ -8,12 +8,15 @@ import { store } from "./store/index.js";
 import "./index.css";
 import "aos/dist/aos.css";
 import "remixicon/fonts/remixicon.css";
+import { FirebaseProvider } from "./Context/firebase.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-        <App />
+        <FirebaseProvider>
+          <App />
+        </FirebaseProvider>
       </Router>
     </Provider>
   </React.StrictMode>
