@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 import Model from "./Model";
-import { useGetItemQuery } from "../../store/api/ItemsSlice";
+import { useFirebase } from "../../Context/firebase";
+import Portfolio from "./Portfolio";
 
 function Contents() {
-  const {data: portfolios = [], isLoading} = useGetItemQuery()
-  console.log(portfolios)
+  const { projects, loading } = useFirebase();
 
   const [nextItem, setNextItem] = useState(6);
   const [showModel, setShowModal] = useState(false);
@@ -37,57 +37,40 @@ function Contents() {
         </div>
         {/* ===== title end ===== */}
         {/* ===== Content start ===== */}
-        <div className="mt-8 flex flex-wrap items-center gap-4">
-          {isLoading ? (
-           <div className="font-medium text-2xl flex gap-3 items-center justify-center">
-            <span className="w-8 h-8 border-2 rounded-full border-primaryColor border-l-gray-200 animate-spin"></span>
-            <h3>Loading...</h3>
-           </div>
+        <div className="mt-8 flex flex-wrap items-center gap-4 justify-center">
+          {loading === false ? (
+            <div className="font-medium text-2xl flex gap-3 items-center justify-center">
+              <span className="w-8 h-8 border-2 rounded-full border-primaryColor border-l-gray-200 animate-spin"></span>
+              <h3>Loading...</h3>
+            </div>
           ) : (
             <>
-            {portfolios.slice(0, nextItem)?.map((portfolio, index) => (
-            <div
-              key={portfolio.id}
-              data-aos="fade-zoom-in"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              className="group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1] overflow-hidden"
-            >
-              <figure>
-                <img src={portfolio.imgUrl} alt="" className="rounded-lg" />
-              </figure>
-              <div className="rounded-lg bg-primaryColor bg-opacity-40 w-full h-full absolute top-0 left-0 hidden group-hover:block ">
-                <div className="w-full h-full flex items-center justify-center">
-                  <button
-                    onClick={() => showModelHandle(portfolio.id)}
-                    className="bg-secondaryColor flex gap-3 items-center justify-center p-2 px-4 border border-solid border-secondaryColor hover:border-white
-              rounded-[5px] text-white hover:bg-primaryColor hover:text-white ease duration-200"
-                  >
-                    <i class="ri-eye-fill"></i>
-                    See Details
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+              {projects.slice(0, nextItem).map((project) => (
+                <Portfolio
+                  key={project.id}
+                  Project={project}
+                  showModelHandle={showModelHandle}
+                />
+              ))}
             </>
           )}
-        </div>
-        {nextItem < portfolios.length && (
-          <button
-            onClick={handleLoadMore}
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            className="bg-primaryColor flex gap-3 items-center justify-center p-2 px-4 border border-solid border-primaryColor
+          {nextItem < projects.length && (
+            <button
+              onClick={handleLoadMore}
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              className="bg-primaryColor flex gap-3 items-center justify-center p-2 px-4 border border-solid border-primaryColor
               rounded-[5px] text-white hover:bg-white hover:text-primaryColor ease duration-200"
-          >
-            <i class="ri-refresh-line"></i>
-            Load More
-          </button>
-        )}
-        {/* ===== Content end ===== */}
+            >
+              <i class="ri-refresh-line"></i>
+              Load More
+            </button>
+          )}
+
+          {/* ===== Content end ===== */}
+        </div>
+        {showModel && <Model activeId={activeId} setShowModal={setShowModal} />}
       </div>
-      {showModel && <Model activeId={activeId} setShowModal={setShowModal} />}
     </section>
   );
 }

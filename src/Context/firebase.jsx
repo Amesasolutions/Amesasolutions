@@ -13,12 +13,12 @@ import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 const FirebaseContext = createContext(null);
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  apiKey: 'AIzaSyDlshIJt30--FukPzwvTS2kZ0Le0okCshQ',
+  authDomain: 'amesa-server.firebaseapp.com',
   projectId: "amesa-server",
-  storageBucket: import.meta.env.VITE_STORAGE,
+  storageBucket: 'amesa-server.appspot.com',
   messagingSenderId: "727020879736",
-  appId: import.meta.env.VITE_APP_ID,
+  appId:'1:727020879736:web:d902f6df6123d369d7528d',
   measurementId: "G-BRT2CJ940H",
 };
 
@@ -34,6 +34,7 @@ const googleProvider = new GoogleAuthProvider();
 
 export const FirebaseProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(false)
   const [projects, setProjects] = useState([])
 
   // sign up with google
@@ -80,11 +81,15 @@ export const FirebaseProvider = ({ children }) => {
     const unSubscribe = onSnapshot(q, (querySnapshot) => {
       let data = [];
 
+      setLoading(false)
+
       querySnapshot.forEach((docs) => {
         data.push({...docs.data(), id:docs.id})
       })
 
       setProjects(data)
+
+      setLoading(true)
     })
 
     return () => unSubscribe()
@@ -93,7 +98,7 @@ export const FirebaseProvider = ({ children }) => {
   // get Image 
   const getImageURL = (path) => {
     const fileRef = ref(storage, path + '');
-    return getDownloadURL(fileRef)
+    return getDownloadURL(fileRef) 
   }
 
   // update project
@@ -117,7 +122,7 @@ export const FirebaseProvider = ({ children }) => {
 
   return (
     <FirebaseContext.Provider
-      value={{ SignupWithGoogle, logOut, user, createProject, projects, getImageURL, updateProject, deleteProject }}
+      value={{ SignupWithGoogle, logOut, user, createProject, projects, getImageURL, updateProject, deleteProject, loading }}
     >
       {children}
     </FirebaseContext.Provider>

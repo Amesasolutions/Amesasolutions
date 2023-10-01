@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom'
 function Project({ project }) {
   const { getImageURL, deleteProject } = useFirebase();
   const [url, setUrl] = useState(null);
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setLoading(false)
     getImageURL(project.imageUrl).then((url) => setUrl(url))
+    setLoading(true)
   }, [url]);
 
   const handleDelete = (id) => {
@@ -16,12 +19,17 @@ function Project({ project }) {
     }
   }
 
+
   return (
     <div className="flex flex-col gap-2 w-[300px] bg-white shadow p-4 rounded-lg">
       {/* image */}
-      <figure className="w-full">
+      {url === null ? (
+        <div>loading...</div>
+      ) : (
+        <figure className="w-full">
         <img src={url} alt="" className="w-full" />
       </figure>
+      )}
       {/* text */}
       <div className="flex flex-col gap-1">
         <h3 className="text-headingColor font-medium text-xl">
