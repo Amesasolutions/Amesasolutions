@@ -26,7 +26,7 @@ function Offer() {
           data-aos="fade-right"
           data-aos-duration="1300"
           className="w-full lg:w-[28rem] p-6 sm:p-9 bg-white shadow-lg rounded flex flex-col gap-3 items-center justify-center
-          border-t-[4px] border-solid border-primaryColor">
+          border-t-[4px] border-solid border-primaryColor cursor-pointer">
             <div className="w-[70px] h-[70px] flex items-center justify-center text-center bg-primaryColor text-white rounded-full">
               <img src={icon01} alt="" className="w-8" />
             </div>
@@ -44,7 +44,7 @@ function Offer() {
           data-aos="fade-left"
           data-aos-duration="1300"
           className="w-full lg:w-[28rem] p-6 sm:p-9 bg-white shadow-lg rounded flex flex-col gap-3 items-center justify-center
-          border-t-[4px] border-solid border-primaryColor">
+          border-t-[4px] border-solid border-primaryColor cursor-pointer">
             <div className="w-[70px] h-[70px] flex items-center justify-center text-center bg-primaryColor text-white rounded-full">
               <img src={icon02} alt="" className="w-8" />
             </div>

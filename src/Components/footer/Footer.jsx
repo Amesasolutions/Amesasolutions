@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import wave from "../../assets/wave-01.png";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa6";
 
 function Footer() {
   const [year, setYear] = useState();
@@ -9,6 +7,7 @@ function Footer() {
     const date = new Date();
     setYear(date.getFullYear());
   }, [year]);
+
   return (
     <section className="bg-primaryColor w-full flex flex-col">
       <div className="container flex flex-col items-center gap-3 text-white">
@@ -109,14 +108,14 @@ function Footer() {
               </p>
               <p className="text-secondaryColor ">
                 <i class="ri-mail-send-line">
-                  <span className="text-gray-100 ml-2 ">
+                  <a href="mailto:amesasolution@gmail.com" className="text-gray-100 ml-2 ">
                     amesasolution@gmail.com
-                  </span>
+                  </a>
                 </i>
               </p>
               <p className="text-secondaryColor ">
                 <i class="ri-phone-line">
-                  <span className="text-gray-100 ml-2 ">+254 743 537705</span>
+                  <a href="tel:+254 743 537705" className="text-gray-100 ml-2 ">+254 743 537705</a>
                 </i>
               </p>
             </div>

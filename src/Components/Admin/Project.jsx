@@ -5,12 +5,9 @@ import { Link } from 'react-router-dom'
 function Project({ project }) {
   const { getImageURL, deleteProject } = useFirebase();
   const [url, setUrl] = useState(null);
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    setLoading(false)
     getImageURL(project.imageUrl).then((url) => setUrl(url))
-    setLoading(true)
   }, [url]);
 
   const handleDelete = (id) => {
