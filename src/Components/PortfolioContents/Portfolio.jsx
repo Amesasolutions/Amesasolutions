@@ -9,10 +9,6 @@ function Portfolio({ Project, showModelHandle }) {
     getImageURL(Project.imageUrl).then((url) => setUrl(url));
   }, []);
 
-  console.log(url);
-
-  console.log(Project);
-
   return (
     <div
       key={Project.id}
